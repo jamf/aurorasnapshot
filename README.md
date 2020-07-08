@@ -8,7 +8,7 @@ rdsbkp.py action tag expiration
 
 ## Required arguments:
 ```
- action           Must be backup or cleanup
+ action           Must be backup (take snapshots) or cleanup (delete old snapshots)
  tag              DBCluster tag, can't have spaces or tabs
 ```
 

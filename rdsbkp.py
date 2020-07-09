@@ -145,7 +145,7 @@ def backup(botoclient, db, environment):
 				db[keys]['status'] = 'Error'
 				print('Error creating snapshot of DBCluster: ' + keys)
 				pass
-	print('Waiting snapshots to be available')
+	print('Waiting for snapshots to become available')
 	waiting = 1
 	while waiting:	
 		for keys in db.keys():

@@ -1,5 +1,5 @@
 # AWS Aurora Cluster Snapshot Handler
-Allows to create and delete Aurora DB snapshots based in tags.
+Allows to create and delete Aurora DB snapshots based on tags.
 
 ## USAGE
 ```
@@ -14,7 +14,7 @@ rdsbkp.py action tag expiration
 
 ## Optional arguments:
 ```
- expiration       Number of days used to mark snaphosts as expired and delete them (Default: 30)
+ expiration       Number of days used to mark snapshots as expired and delete them (Default: 30)
 ```
 
 ## Requirements:

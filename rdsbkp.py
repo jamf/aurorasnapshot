@@ -48,11 +48,11 @@ def printHelp():
 	print("""Usage: rdsbkp.py action tag expiration
 
 Required arguments:
- action           Must be backup or cleanup
+ action           Must be backup (take snapshots) or cleanup (delete old snapshots)
  tag              DBCluster tag, can't have spaces or tabs
 
 Optional arguments:
- expiration       Number of days used to mark snaphosts as expired and delete them (Default: 30)
+ expiration       Number of days used to mark snapshots as expired and delete them (Default: 30)
 
 Requirements:
  - boto3 (pip install boto3)
@@ -157,7 +157,7 @@ def backup(botoclient, db, environment):
 	finalBackupPrint(db, environment)
 	finalBackupStatus(db, environment)
 
-#### CleanUp functions
+#### Cleanup functions
 
 def initSnapDB(botoclient, dbclusters, dbsnap, environment, today):
 	for keys in dbclusters.keys():

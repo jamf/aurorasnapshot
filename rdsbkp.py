@@ -17,12 +17,10 @@ def main():
 		updateTag(client, dbstatus, args['env'])
 		tagChecker(dbstatus)
 		backup(client, dbstatus, args['env'])
-		exit(0)
 	elif args['action'] == 'cleanup':
 		updateTag(client, dbstatus, args['env'])
 		tagChecker(dbstatus)
 		cleanup(client, dbstatus, args['env'], args['exp'])
-		exit(0)
 	else:
 		printHelp()
 		exit(1)
@@ -155,7 +153,7 @@ def backup(botoclient, db, environment):
 				updateSnapStatus(botoclient, db[keys])
 				print("DB Cluster: " + keys + ", Snapshot Name: " + db[keys]['snapName'] + ", Status: " + db[keys]['status'])
 		waiting = countWaiting(db)
-		time.sleep(5)
+		time.sleep(30)
 	finalBackupPrint(db, environment)
 	finalBackupStatus(db, environment)
 

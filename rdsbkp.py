@@ -59,10 +59,10 @@ Requirements:
  - AWS credentials configured (More information: 
  https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html)
 
-Limiatations:
- - This script works just with Aurora DB Clusters
+Limitations:
+ - This script works just with Aurora DB clusters
  - AWS CLI has a limit of 100 entries per command so the script is not able to
- list more than 100 snapshots per Cluster
+ list more than 100 snapshots per cluster
 """)
 
 ##### Shared functions
@@ -97,7 +97,7 @@ def tagChecker(db):
 		print('Tag not found')
 		exit(5)
 
-##### Backup funtions
+##### Backup functions
 
 def takeSnapshot(botoclient, dbcluster):
 	print('Backing up: ' + dbcluster)
@@ -157,7 +157,7 @@ def backup(botoclient, db, environment):
 	finalBackupPrint(db, environment)
 	finalBackupStatus(db, environment)
 
-#### CleanUp funtions
+#### CleanUp functions
 
 def initSnapDB(botoclient, dbclusters, dbsnap, environment, today):
 	for keys in dbclusters.keys():

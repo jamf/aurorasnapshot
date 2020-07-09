@@ -1,5 +1,5 @@
 # AWS Aurora Cluster Snapshot Handler
-Allows to create and delete Aurora DB Snapshots based in tags.
+Allows to create and delete Aurora DB snapshots based in tags.
 
 ## USAGE
 ```
@@ -22,6 +22,6 @@ rdsbkp.py action tag expiration
  - boto3 (pip install boto3)
  - AWS credentials configured (More information: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html)
 
-## Limiatations:
- - This script works just with Aurora DB Clusters
- - AWS CLI has a limit of 100 entries per command so the script is not able to list more than 100 snapshots per Cluster
+## Limitations:
+ - This script works just with Aurora DB clusters
+ - AWS CLI has a limit of 100 entries per command so the script is not able to list more than 100 snapshots per cluster

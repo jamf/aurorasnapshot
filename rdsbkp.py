@@ -17,10 +17,12 @@ def main():
 		updateTag(client, dbstatus, args['env'])
 		tagChecker(dbstatus)
 		backup(client, dbstatus, args['env'])
+		exit(0)
 	elif args['action'] == 'cleanup':
 		updateTag(client, dbstatus, args['env'])
 		tagChecker(dbstatus)
 		cleanup(client, dbstatus, args['env'], args['exp'])
+		exit(0)
 	else:
 		printHelp()
 		exit(1)

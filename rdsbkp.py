@@ -132,7 +132,7 @@ def finalBackupPrint(db, environment):
 
 def finalBackupStatus(db, environment):
 	for keys in db.keys():
-		if db[keys]['env'] == environment and db[keys]['status'] != "creating":
+		if db[keys]['env'] == environment and db[keys]['status'] != "available":
 			exit(5)
 
 def backup(botoclient, db, environment):

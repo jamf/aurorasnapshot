@@ -1,0 +1,23 @@
+name: Upload prod release
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+
+  build:
+    name: Build release
+    runs-on: ubuntu-18.04
+    steps:
+
+    - name: Upload
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "staging-latest"
+        prerelease: true
+        files: |
+          LICENSE
+          rdsbkp.py 

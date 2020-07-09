@@ -171,7 +171,7 @@ def deleteSnapshot(botoclient, dbsnap, expiration):
 	for snap in dbsnap:
 		if dbsnap[snap] > expiration:
 			print('----')
-			print(snap + " is " + str(dbsnap[snap]) + " days old, so will be deleted")
+			print(snap + " is " + str(dbsnap[snap]) + " days old, so it will be deleted")
 			response = botoclient.delete_db_cluster_snapshot(DBClusterSnapshotIdentifier=snap)
 			pp = pprint.PrettyPrinter(indent=4)
 			pp.pprint(response)

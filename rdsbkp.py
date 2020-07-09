@@ -89,11 +89,11 @@ def tagSearcher(db):
 	return db[1]['env'] == environment
 
 def tagChecker(db):
-	count = 0
+	tagcount = 0
 	tagdbs = filter(tagSearcher, db.items())
 	for db in tagdbs:
-		count += 1
-	if count == 0:
+		tagcount += 1
+	if tagcount == 0:
 		print('Tag not found')
 		exit(5)
 
@@ -184,7 +184,7 @@ def finalCleanupPrint(dbsnap, expiration):
 	for snap in dbsnap.keys():
 		if dbsnap[snap] > expiration:
 			count += 1
-			print("Deleted Snapshot Name: " + str(snap) + ", Expired: " + str(dbsnap[snap]) + " days ago.")
+			print("Deleted Snapshot Name: " + str(snap) + ", expired: " + str(dbsnap[snap]) + " days ago.")
 	if count == 0:
 		print('There are no snapshots to delete')
 

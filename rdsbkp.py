@@ -186,7 +186,7 @@ def finalCleanupPrint(dbsnap, expiration):
 			count += 1
 			print("Deleted Snapshot Name: " + str(snap) + ", Expired: " + str(dbsnap[snap]) + " days ago.")
 	if count == 0:
-		print('There is no snapshots to delete')
+		print('There are no snapshots to delete')
 
 def cleanup(botoclient, db, environment, expiration):
 	snapinfo = {}
